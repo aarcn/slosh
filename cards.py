@@ -9,17 +9,19 @@ class Card:
 
 
 suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
-ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
+ranks = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
 
 deck = [Card(suit, rank) for suit in suits for rank in ranks]
 
 count_mapping = {
     '2': 1, '3': 1, '4': 1, '5': 1, '6': 1,
     '7': 0, '8': 0, '9': 0,
-    '10': -1, 'Jack': -1, 'Queen': -1, 'King': -1, 'Ace': -1
+    'T': -1, 'J': -1, 'Q': -1, 'K': -1, 'A': -1
 }
 
-master_map = {
+running_count = 0
+
+master_count = {
     # Spade cards
     'AS': 8, '2S': 8, '3S': 8, '4S': 8, '5S': 8,
     '6S': 8, '7S': 8, '8S': 8, '9S': 8, 'TS': 8,
@@ -39,4 +41,16 @@ master_map = {
     'AD': 8, '2D': 8, '3D': 8, '4D': 8, '5D': 8,
     '6D': 8, '7D': 8, '8D': 8, '9D': 8, 'TD': 8,
     'JD': 8, 'QD': 8, 'KD': 8
+}
+
+dealer_hand = {
+
+}
+
+player_hand = {
+
+}
+
+split_hand = {
+
 }
