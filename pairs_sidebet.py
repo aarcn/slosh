@@ -2,7 +2,7 @@ from cards import ranks
 import math
 
 
-def pairs_side_bet(master_count_map):
+def pairs_sidebet(master_count_map):
     """
     returns RTP for pairs side bet
     example float return value: 92.0482
