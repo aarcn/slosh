@@ -21,27 +21,29 @@ count_mapping = {
 
 running_count = 0
 
+deck_count = 8
 master_count = {
     # Spade cards
-    'AS': 8, '2S': 8, '3S': 8, '4S': 8, '5S': 8,
-    '6S': 8, '7S': 8, '8S': 8, '9S': 8, 'TS': 8,
-    'JS': 8, 'QS': 8, 'KS': 8,
+    'AS': deck_count, '2S': deck_count, '3S': deck_count, '4S': deck_count, '5S': deck_count,
+    '6S': deck_count, '7S': deck_count, '8S': deck_count, '9S': deck_count, 'TS': deck_count,
+    'JS': deck_count, 'QS': deck_count, 'KS': deck_count,
 
     # Club cards
-    'AC': 8, '2C': 8, '3C': 8, '4C': 8, '5C': 8,
-    '6C': 8, '7C': 8, '8C': 8, '9C': 8, 'TC': 8,
-    'JC': 8, 'QC': 8, 'KC': 8,
+    'AC': deck_count, '2C': deck_count, '3C': deck_count, '4C': deck_count, '5C': deck_count,
+    '6C': deck_count, '7C': deck_count, '8C': deck_count, '9C': deck_count, 'TC': deck_count,
+    'JC': deck_count, 'QC': deck_count, 'KC': deck_count,
 
     # Heart cards
-    'AH': 8, '2H': 8, '3H': 8, '4H': 8, '5H': 8,
-    '6H': 8, '7H': 8, '8H': 8, '9H': 8, 'TH': 8,
-    'JH': 8, 'QH': 8, 'KH': 8,
+    'AH': deck_count, '2H': deck_count, '3H': deck_count, '4H': deck_count, '5H': deck_count,
+    '6H': deck_count, '7H': deck_count, '8H': deck_count, '9H': deck_count, 'TH': deck_count,
+    'JH': deck_count, 'QH': deck_count, 'KH': deck_count,
 
     # Diamond cards
-    'AD': 8, '2D': 8, '3D': 8, '4D': 8, '5D': 8,
-    '6D': 8, '7D': 8, '8D': 8, '9D': 8, 'TD': 8,
-    'JD': 8, 'QD': 8, 'KD': 8
+    'AD': deck_count, '2D': deck_count, '3D': deck_count, '4D': deck_count, '5D': deck_count,
+    '6D': deck_count, '7D': deck_count, '8D': deck_count, '9D': deck_count, 'TD': deck_count,
+    'JD': deck_count, 'QD': deck_count, 'KD': deck_count
 }
+
 
 dealer_hand = {
 
