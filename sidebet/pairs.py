@@ -47,7 +47,7 @@ def pairs_sidebet(master_count_map):
 
     mixed_probability -= colored_probability + suited_probability
 
-    # no pair probability is calculated by subtracting every special combination of hands from 1
+    # no_pair_probability is compliment of probability of drawing any pair
     no_pair_probability = 1 - (suited_probability + colored_probability + mixed_probability)
 
     calculated_rtp = 100 + (((suited_probability * 25) + (colored_probability * 12) +
