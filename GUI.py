@@ -2,7 +2,9 @@ import tkinter as tk
 from tkinter import messagebox
 from cards import master_count, count_mapping, running_count
 
-
+"""
+The purpose of this class "SloshGUI" is to launch the GUI provided for the user. 
+"""
 class SloshGUI:
     def __init__(self, master):
         self.master = master
@@ -51,7 +53,7 @@ class SloshGUI:
     def create_card_display(self):
         """
         Creates a card display layout with their suit, rank, and corresponding color.
-        suit symbols are also color coded and added to mimic a real card.
+        suit symbols are also color-coded and added to mimic a real card.
         """
         suits = ["Spades", "Clubs", "Diamonds", "Hearts"]
         ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K']
