@@ -1,12 +1,12 @@
-from cards import ranks, master_count
+from cards import ranks
 import math
 
 
-# logic to determine if pairs side bet is worth it
 def pairs_side_bet(master_count_map):
     """
-    calculate RTP for pairs side bet
-    will display Calculated RTP vs Theoretical RTP (95.90%)
+    returns RTP for pairs side bet
+    example float return value: 92.0482
+    will display Calculated RTP vs Theoretical RTP (92.0482%)
     Suited 20:1
     Colored: 10:1
     Mixed: 5:1
@@ -36,7 +36,6 @@ def pairs_side_bet(master_count_map):
         if black_count > 1:
             black_probability += (black_count / total_cards) * ((black_count - 1) / (total_cards - 1))
 
-    print(red_probability, black_probability)
     colored_probability = red_probability + black_probability - suited_probability
 
     # probability of drawing mixed pairs
@@ -64,9 +63,4 @@ def pairs_side_bet(master_count_map):
     else:
         print("Not worth it")
 
-
-
-pairs_side_bet(master_count)
-
-# logic to determine if poker (21 + 3) side bet is worth it
-# logic to determine if lucky ladies (any 20 queens) side bet is worth it
+    return calculated_rtp
