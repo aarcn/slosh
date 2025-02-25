@@ -4,25 +4,30 @@ import math
 
 def pairs_sidebet(master_count_map):
     """
-    returns RTP for pairs side bet
-    example float return value: 92.0482
-    will display Calculated RTP vs Theoretical RTP (92.0482%)
-    Suited 20:1
-    Colored: 10:1
-    Mixed: 5:1
+    Returns RTP for pairs side bet
+    Example return value: 99.1234
+    Will print Calculated RTP vs Theoretical RTP (92.0482%)
+
+    Payouts:
+    Suited Pairs: 20:1
+    Colored Pairs: 10:1
+    Mixed Pairs: 5:1
+
+    baby combinatorics compared to poker.py
     """
     total_cards = sum(master_count_map.values())
+    total_pairs = math.comb(total_cards, 2)
+
     suited_probability = 0
     colored_probability = 0
     mixed_probability = 0
-    total_pairs = math.comb(total_cards, 2)
 
-    # probability of drawing suited pairs
+    # probability of drawing a suited pair
     for card, count in master_count_map.items():
         if count > 1:
             suited_probability += (count / total_cards) * ((count - 1) / (total_cards - 1))
 
-    # probability of drawing colored pairs
+    # probability of drawing a colored pair
     red_probability = 0
     black_probability = 0
 
@@ -38,7 +43,7 @@ def pairs_sidebet(master_count_map):
 
     colored_probability = red_probability + black_probability - suited_probability
 
-    # probability of drawing mixed pairs
+    # probability of drawing a mixed pair
     for rank in ranks:
         count = (master_count_map.get(rank + 'H', 0) + master_count_map.get(rank + 'D', 0) +
                  master_count_map.get(rank + 'S', 0) + master_count_map.get(rank + 'C', 0))
@@ -55,12 +60,13 @@ def pairs_sidebet(master_count_map):
 
     theoretical_rtp = 92.0482
 
+    print("|====== pairs.py ======|")
     print(f"Calculated RTP: {calculated_rtp:.4f}%")
     print(f"Theoretical RTP: {theoretical_rtp:.4f}%")
-
     if calculated_rtp > theoretical_rtp:
         print("Worth it")
     else:
         print("Not worth it")
+    print("\n\n")
 
     return calculated_rtp
