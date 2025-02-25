@@ -8,7 +8,7 @@ class Card:
         return f"{self.rank} of {self.suit}"
 
 
-suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+suits = ['S', 'C', 'H', 'D']
 ranks = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
 
 deck = [Card(suit, rank) for suit in suits for rank in ranks]
