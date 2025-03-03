@@ -10,6 +10,7 @@ class Card:
 
 suits = ['S', 'C', 'H', 'D']
 ranks = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
+ten_value_ranks = ['T', 'J', 'Q', 'K']
 
 deck = [Card(suit, rank) for suit in suits for rank in ranks]
 
@@ -21,7 +22,7 @@ count_mapping = {
 
 running_count = 0
 
-deck_count = 8
+deck_count = 6
 master_count = {
     # Spade cards
     'AS': deck_count, '2S': deck_count, '3S': deck_count, '4S': deck_count, '5S': deck_count,
